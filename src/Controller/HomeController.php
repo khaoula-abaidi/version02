@@ -21,7 +21,7 @@ class HomeController extends AbstractController
         $contributor = $this->getDoctrine()->getRepository(Contributor::class)->find(1);
         $form = $this->createForm(ContributorType::class,$contributor);
         $form->handleRequest($request);
-
+ //SI data contient les nouvelles deicions juste copie collé
         if($form->isSubmitted()){
             $data = $form->getData();
             dump($data);die;
